@@ -1,1 +1,45 @@
+# ⚙️ RAT KING RECON — PATCH NOTES
+## v1.0.1
+*"A few loose bolts tightened, a few rats put back where they belong."*
 
+---
+
+### 🆕 New Contraptions
+
+**⚔️ Battle Rat System**
+You can now designate a specific rat as your **Battle Rat** — marked with a badge/icon right in the Ledger — so *you* choose who steps into the scrapyard, instead of leaving it to the machine's whims.
+
+- Your Battle Rat is locked out of **Expeditions**, **Scrap Run**, and **Ledger Tasks** while on duty — a fighter earning its keep can't also be off running errands. A real trade-off between combat power and passive income.
+- Reassigning your Battle Rat is **free and instant** — swap freely, experiment, find your champion.
+- If your Battle Rat gets knocked out or fed into the Splicing Vat, it steps down gracefully on its own — no jammed gears, nothing left locked up.
+
+**🛠️ Debug Combat Trigger** *(dev builds only)*
+An internal tool to force a combat encounter on demand — purely for testing, not something you'll see in the live build.
+
+---
+
+### 🔧 Tinkering & Fixes
+
+**📋 Contract Board — Active Contract View**
+Previously, tapping a bounty while one was already in progress just dead-ended with a "you already have one" popup. Now you'll see your **active contract's progress, time remaining, and reward** right there — no more guessing what you signed up for.
+
+**🏷️ Real Package ID**
+Swapped the placeholder `com.example.ratkingrecon` for the real applicationId — a necessary bolt to tighten ahead of the Play Store submission.
+
+**📈 Power Surge / Golden Wrench Scaling**
+These combat buffs were flat bonuses that quietly lost their punch against tougher bosses. They're now **percentage-based**, so they scale properly no matter how big the Rustbot on the other side of the fight is.
+
+**🧬 Fusion Pot Roster Drift**
+18 rat species that were previously unreachable through Splicing are now obtainable. The gene pool just got a lot deeper.
+
+---
+
+### 🧹 Workshop Cleanup
+
+- Removed dead code left over from earlier builds
+- Fixed inconsistent key references across systems
+- Extracted hardcoded strings for cleaner localization down the line
+
+---
+
+*Keep walking, keep splicing. The scrapyard's always growing.*
