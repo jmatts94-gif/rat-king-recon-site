@@ -371,6 +371,65 @@
     color: var(--rust);
   }
 
+  /* PATCH NOTES */
+  .patch-entry {
+    background: var(--panel);
+    border: 2px solid var(--line);
+    border-radius: 18px;
+    padding: 26px 26px 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+  .patch-entry h3 {
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .patch-entry .patch-tagline {
+    color: var(--ink-soft);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  .patch-group { margin-bottom: 14px; }
+  .patch-group:last-child { margin-bottom: 0; }
+  .patch-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+  .patch-label.new { background: rgba(184,89,46,0.12); color: var(--rust); }
+  .patch-label.fixed { background: rgba(111,165,118,0.15); color: #3A6B44; }
+  .patch-label.cleanup { background: rgba(192,138,62,0.15); color: var(--brass-dark); }
+  .patch-entry ul {
+    list-style: none;
+    padding-left: 2px;
+  }
+  .patch-entry ul li {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .patch-entry ul li::before {
+    content: '⚙';
+    position: absolute;
+    left: 0;
+    color: var(--brass);
+    font-size: 0.8rem;
+  }
+  .patch-entry ul li strong { color: var(--ink); }
+
   footer {
     text-align: center;
     padding: 40px 24px 60px;
@@ -397,6 +456,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#download">Download</a></li>
       <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#patch-notes">Patch Notes</a></li>
     </ul>
   </div>
 </nav>
@@ -505,6 +565,48 @@
 
   <div class="feedback-card">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-C-UnOu_gWJaCvGohrYwVBohARtYq17DqK8neTNPx_PCyzg/viewform?embedded=true" width="100%" height="1120" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:16px; border:2px solid var(--line); display:block;">Loading…</iframe>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="rivet-divider"><div class="track"></div><div class="cog">⚙️</div><div class="track"></div></div>
+</div>
+
+<section id="patch-notes" class="wrap">
+  <div class="section-head">
+    <div class="kicker">Update Log</div>
+    <h2>Patch Notes</h2>
+    <p>Every version, what changed, straight from the workshop floor.</p>
+  </div>
+
+  <div class="patch-entry">
+    <h3>⚙️ v1.0.1</h3>
+    <div class="patch-tagline">"A few loose bolts tightened, a few rats put back where they belong."</div>
+
+    <div class="patch-group">
+      <div class="patch-label new">🆕 New</div>
+      <ul>
+        <li><strong>Battle Rat system</strong> — designate a rat to fight (badge shown in the Ledger); locks it out of Expeditions/Scrap Run/Ledger Tasks while active, free to reassign, clears itself on KO or splice.</li>
+        <li><strong>Debug combat trigger</strong> (dev builds only) — internal tool to force an encounter for testing.</li>
+      </ul>
+    </div>
+
+    <div class="patch-group">
+      <div class="patch-label fixed">🔧 Fixed</div>
+      <ul>
+        <li>Contract Board now shows active contract progress, time remaining, and reward instead of a dead-end popup.</li>
+        <li>Real applicationId set ahead of Play Store submission.</li>
+        <li>Power Surge / Golden Wrench are now percentage-based, so they scale properly against boss-tier enemies.</li>
+        <li>Fusion Pot roster drift fixed — 18 previously-unreachable species now obtainable through Splicing.</li>
+      </ul>
+    </div>
+
+    <div class="patch-group">
+      <div class="patch-label cleanup">🧹 Cleanup</div>
+      <ul>
+        <li>Removed dead code, fixed inconsistent key references, extracted hardcoded strings.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
