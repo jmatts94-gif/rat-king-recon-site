@@ -410,6 +410,7 @@
   .patch-label.new { background: rgba(184,89,46,0.12); color: var(--rust); }
   .patch-label.fixed { background: rgba(111,165,118,0.15); color: #3A6B44; }
   .patch-label.cleanup { background: rgba(192,138,62,0.15); color: var(--brass-dark); }
+  .patch-label.tuned { background: rgba(111,165,118,0.15); color: var(--mint); background: rgba(58,42,30,0.08); color: var(--ink-soft); }
   .patch-entry ul {
     list-style: none;
     padding-left: 2px;
@@ -577,6 +578,42 @@
     <div class="kicker">Update Log</div>
     <h2>Patch Notes</h2>
     <p>Every version, what changed, straight from the workshop floor.</p>
+  </div>
+
+  <div class="patch-entry">
+    <h3>⚙️ v1.0.2</h3>
+    <div class="patch-tagline">"New gears in the shop, sharper teeth in the Rustbots, and the whole workshop's had a good polish."</div>
+
+    <div class="patch-group">
+      <div class="patch-label new">🆕 New</div>
+      <ul>
+        <li><strong>Relic Trader</strong> added to the Shop's Featured section — trade Rusted Gears, Glowing Vials, Tattered Blueprints, and Heavy Wrenches for Scrap, Binder frames, combat items, or a Masterwork Hatchery discount.</li>
+        <li><strong>Two premium animated Binder frames</strong> — Gears and Steam — priced above standard frames, with visual tuning for better visibility.</li>
+        <li><strong>UI depth &amp; elevation pass</strong> — cards, buttons, the home screen egg, and currency pills now have shadows/gradients for a more polished, tactile feel.</li>
+        <li><strong>Empty states</strong> added for new players across the Ledger, Relic Trader, and Achievements screens.</li>
+        <li><strong>Per-Rustbot flavor text</strong> in the combat log, including unique lines for all 5 named bosses.</li>
+        <li><strong>New sound cues</strong> for hatching, combat wins, and relic drops.</li>
+        <li><strong>Screen transition animations</strong> (fade/slide) between main screens.</li>
+      </ul>
+    </div>
+
+    <div class="patch-group">
+      <div class="patch-label fixed">🔧 Fixed</div>
+      <ul>
+        <li>Notification ID collision — the live step-count notification now displays correctly as its own notification, separate from the tracking service notification.</li>
+        <li>Relic drop rate now scales properly with Ledger Task tier (was previously identical across all tiers); relics no longer cap at 4 and accumulate properly.</li>
+        <li>"Relics recovered" label now accurately shows both total held and distinct types.</li>
+        <li>Shop screen header and "Back to the Workshop" button no longer stay stuck while scrolling.</li>
+      </ul>
+    </div>
+
+    <div class="patch-group">
+      <div class="patch-label tuned">⚖️ Tuned</div>
+      <ul>
+        <li>Major combat balance fix — Rustbot difficulty scaling had a rounding bug causing stronger rats to face disproportionately harder fights; replaced with a proper difficulty curve.</li>
+        <li>Early-game combat difficulty increased — fights now carry real stakes from Level 1 onward, ramping smoothly to the existing endgame balance by Level 11.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="patch-entry">
